@@ -47,6 +47,7 @@ We notice that we have a return with the following content: "Why don't you dig h
 
 Flag: acdfCTF{L3t_try_s0m3_Graph_0ut}
 
+<br>
 - Image Lookup:
 
 <p align="center"> <img src="https://github.com/Assa228/Final_ACDF_CTF_2023/blob/main/images/6.png" alt="img"></p>
@@ -58,6 +59,7 @@ here is the query that I used to get the flag
 
 Unfortunately the flag is no longer accessible on the server
 
+<br>
 - Konoha:
 
 <p align="center"> <img src="https://github.com/Assa228/Final_ACDF_CTF_2023/blob/main/images/4.png" alt="img"></p>
@@ -105,10 +107,12 @@ It is therefore necessary to brute force the missing x characters. the hint gave
 Ps: apparently the 5 missing characters x could be found in the source code of the application personally I didn't solve it like that.
 here is the final request to have the flag:
 
-![image](https://github.com/Assa228/Final_ACDF_CTF_2023/blob/main/images/5.png)
+<p align="center"> <img src="https://github.com/Assa228/Final_ACDF_CTF_2023/blob/main/images/5.png" alt="img"></p>
 
 The flag has unfortunately been removed from the server. I unfortunately didn't take a picture when I solved it but the request on the picture still exact.
 
 </details>
 
-
+<br>
+- DPO Agba:
+Coming soon i need a bit of rest lol
