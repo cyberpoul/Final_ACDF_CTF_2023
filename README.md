@@ -21,7 +21,7 @@ I'll give the solution to some of the challenges that I solved
 #### Steganography
 - Toka 
 </details>
-<br>
+
 <br>
 <details><summary>Web :</summary>
   
@@ -59,7 +59,7 @@ here is the query that I used to get the flag
 
 Unfortunately the flag is no longer accessible on the server
 
-<br>
+
 - Konoha:
 
 <p align="center"> <img src="https://github.com/Assa228/Final_ACDF_CTF_2023/blob/main/images/4.png" alt="img"></p>
@@ -111,8 +111,6 @@ here is the final request to have the flag:
 
 The flag has unfortunately been removed from the server. I unfortunately didn't take a picture when I solved it but the request on the picture still exact.
 
-
-<br>
 - DPO Agba:
 
 Coming soon i need a bit of rest lol
