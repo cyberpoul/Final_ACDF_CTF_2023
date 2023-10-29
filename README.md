@@ -112,8 +112,3 @@ here is the final request to have the flag:
 <p align="center"> <img src="https://github.com/Assa228/Final_ACDF_CTF_2023/blob/main/images/5.png" alt="img"></p>
 
 The flag has unfortunately been removed from the server. I unfortunately didn't take a picture when I solved it but the request on the picture still exact.
-
-- DPO Agba:
-
-Coming soon i need a bit of rest lol
-</details>
