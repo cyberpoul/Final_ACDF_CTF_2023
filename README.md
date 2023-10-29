@@ -102,7 +102,7 @@ if ($decodedFile === 'Sup3rs3cr3tFlag.txt') {
 the previous lines check that the file name corresponds to Sup3rs3cr3tFlag.txt and displays this secret message to us 
 ```echo $secretContent;```
 what could be simpler we have the name of the file and the key to access it.
-be careful in the key value we have hidden characters (5 characters x) 'Kismet-Abzee-Berrywuxxxx'.
+be careful in the key value we have hidden characters (5 characters x) 'Kismet-Abzee-Berrywuxxxxx'.
 It is therefore necessary to brute force the missing x characters. the hint gave us part of the missing characters, we just had to brute force the rest to obtain the flag.
 Ps: apparently the 5 missing characters x could be found in the source code of the application personally I didn't solve it like that.
 here is the final request to have the flag:
