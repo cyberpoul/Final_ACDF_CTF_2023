@@ -25,6 +25,8 @@ I'll give the solution to some of the challenges that I solved
 
 #### Grandline:
 
+![image](https://github.com/Assa228/Final_ACDF_CTF_2023/blob/main/images/7.png)
+
 This is an injection of graphql code, we even have a console which displays the results of the commands
 
 First of all, we are going to do the enumeration in order to see the functions and methods that are accessible. the following payload does the trick:
@@ -45,7 +47,7 @@ Flag: acdfCTF{L3t_try_s0m3_Graph_0ut}
 
 #### Image Lookup:
 
-pic
+![image](https://github.com/Assa228/Final_ACDF_CTF_2023/blob/main/images/6.png)
 
 This one is an easy lfi web challenge you just had to call the flag file with the following payload: "file:///flag.txt" , paying attention to encoding the characters /
 here is the query that I used to get the flag
