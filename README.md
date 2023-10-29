@@ -6,6 +6,7 @@ Id: @Assa
 
 I'll give the solution to some of the challenges that I solved
 
+<details><summary>Challenges :</summary>
 #### Web
 - Grandline
 - Image Lookup
@@ -20,9 +21,12 @@ I'll give the solution to some of the challenges that I solved
 
 #### Steganography
 - Toka 
+</details>
 
-
+#### Web
+<details>
 * Grandline:
+* 
 <p align="center"> <img src="https://github.com/Assa228/Final_ACDF_CTF_2023/blob/main/images/7.png" alt="img"></p>
 
 This is an injection of graphql code, we even have a console which displays the results of the commands
@@ -104,5 +108,7 @@ here is the final request to have the flag:
 ![image](https://github.com/Assa228/Final_ACDF_CTF_2023/blob/main/images/5.png)
 
 The flag has unfortunately been removed from the server. I unfortunately didn't take a picture when I solved it but the request on the picture still exact.
+
+</details>
 
 
