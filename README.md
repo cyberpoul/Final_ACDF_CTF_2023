@@ -9,19 +9,19 @@ I'll give the solution to some of the challenges that I solved
 <details><summary>Challenges :</summary>
 
 #### Web
-Grandline
-Image Lookup
-DPO Agba
+- Grandline
+- Image Lookup
+- DPO Agba
 - Konoha
   
 #### Cryptography
-What's going on 
+- What's going on 
 
 #### Forensics
-Detective Conan 1 
+- Detective Conan 1 
 
 #### Steganography
-Toka 
+- Toka 
 
 </details>
 
