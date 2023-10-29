@@ -20,12 +20,9 @@ I'll give the solution to some of the challenges that I solved
 
 #### Steganography
 - Toka 
-
 </details>
 <br>
-**********************************************************************************************************************************************************************
 <br>
-
 <details><summary>Web :</summary>
 * Grandline:
 * 
