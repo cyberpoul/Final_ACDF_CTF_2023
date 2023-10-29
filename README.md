@@ -30,7 +30,7 @@ This is an injection of graphql code, we even have a console which displays the 
 First of all, we are going to do the enumeration in order to see the functions and methods that are accessible. the following payload does the trick:
 ![image](https://github.com/Assa228/Final_ACDF_CTF_2023/blob/main/images/1.png)
 
-we can notice that we have a rather interesting flags function with the id, author, content and flag parameters.
+we can notice that we have an interesting function called "flags" with the id, author, content and flag parameters.
 Let's try to query the id 1 of the flags function. here I specified the content and flag parameters.
 ![image](https://github.com/Assa228/Final_ACDF_CTF_2023/blob/main/images/2.png)
 
