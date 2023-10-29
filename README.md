@@ -111,8 +111,9 @@ here is the final request to have the flag:
 
 The flag has unfortunately been removed from the server. I unfortunately didn't take a picture when I solved it but the request on the picture still exact.
 
-</details>
 
 <br>
 - DPO Agba:
+
 Coming soon i need a bit of rest lol
+</details>
