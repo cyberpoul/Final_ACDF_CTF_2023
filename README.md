@@ -22,11 +22,8 @@ I'll give the solution to some of the challenges that I solved
 - Toka 
 
 
-### Web
-
-#### Grandline:
-
-![image](https://github.com/Assa228/Final_ACDF_CTF_2023/blob/main/images/7.png)
+* Grandline:
+<p align="center"> <img src="https://github.com/Assa228/Final_ACDF_CTF_2023/blob/main/images/7.png" alt="img"></p>
 
 This is an injection of graphql code, we even have a console which displays the results of the commands
 
