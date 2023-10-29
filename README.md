@@ -4,7 +4,7 @@ Team: RedTeam-TG
 
 Id: Assa
 
-I'll give the solution to some of the challenges that I solved
+I'll give the solutions to some of the challenges that I solved
 
 #### Web
 - Grandline
