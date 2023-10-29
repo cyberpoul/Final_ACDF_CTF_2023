@@ -28,20 +28,36 @@ I'll give the solution to some of the challenges that I solved
 This is an injection of graphql code, we even have a console which displays the results of the commands
 
 First of all, we are going to do the enumeration in order to see the functions and methods that are accessible. the following payload does the trick:
+
 ![image](https://github.com/Assa228/Final_ACDF_CTF_2023/blob/main/images/1.png)
 
 we can notice that we have an interesting function called "flags" with the id, author, content and flag parameters.
 Let's try to query the id 1 of the flags function. here I specified the content and flag parameters.
+
 ![image](https://github.com/Assa228/Final_ACDF_CTF_2023/blob/main/images/2.png)
 
 
 We notice that we have a return with the following content: "Why don't you dig harder"; the rest becomes logical we must identify the id which contains our flag. I first tried id 2 then id 3 which turned out to be the right one.
+
 ![image](https://github.com/Assa228/Final_ACDF_CTF_2023/blob/main/images/3.png)
 
 Flag: acdfCTF{L3t_try_s0m3_Graph_0ut}
 
 #### Image Lookup:
+
 pic
+
+This one is an easy lfi web challenge you just had to call the flag file with the following payload: "file:///flag.txt" , paying attention to encoding the characters /
+here is the query that I used to get the flag
+
+```http://16.170.230.246/index.php?url=file%3a%2f%2f%2fflag.txt```
+
+Unfortunately the flag is no longer accessible on the server
+
+#### Konoha:
+
+![image](https://github.com/Assa228/Final_ACDF_CTF_2023/blob/main/images/4.png)
+
 we have a source.php file. let's try to analyze it:
 ```python
 <?php
@@ -85,8 +101,8 @@ It is therefore necessary to brute force the missing x characters. the hint gave
 Ps: apparently the 5 missing characters x could be found in the source code of the application personally I didn't solve it like that.
 here is the final request to have the flag:
 
-pic
+![image](https://github.com/Assa228/Final_ACDF_CTF_2023/blob/main/images/5.png)
 
-the flag has unfortunately been removed from the server. I unfortunately didn't take a picture when I solved it but the request on the picture still exact.
+The flag has unfortunately been removed from the server. I unfortunately didn't take a picture when I solved it but the request on the picture still exact.
 
 
