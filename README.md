@@ -6,8 +6,6 @@ Id: @Assa
 
 I'll give the solution to some of the challenges that I solved
 
-<details><summary>Challenges :</summary>
-
 #### Web
 - Grandline
 - Image Lookup
@@ -24,7 +22,9 @@ I'll give the solution to some of the challenges that I solved
 - Toka 
 
 </details>
-
+<br>
+**********************************************************************************************************************************************************************
+<br>
 
 <details><summary>Web :</summary>
 * Grandline:
