@@ -2,7 +2,7 @@
 
 Team: RedTeam-TG
 
-Id: @Assa
+Id: Assa
 
 I'll give the solution to some of the challenges that I solved
 
