@@ -39,3 +39,54 @@ We notice that we have a return with the following content: "Why don't you dig h
 ![image](https://github.com/Assa228/Final_ACDF_CTF_2023/blob/main/images/3.png)
 
 Flag: acdfCTF{L3t_try_s0m3_Graph_0ut}
+
+#### Image Lookup:
+pic
+we have a source.php file. let's try to analyze it:
+```python
+<?php
+$secretFilePath = '/app/Sup3rs3cr3tFlag.txt';
+
+$secretKey = 'Kismet-Abzee-Berrywuxxxxx';
+
+$requestedFile = isset($_GET['file']) ? $_GET['file'] : '';
+
+$providedKey = isset($_GET['key']) ? $_GET['key'] : '';
+
+$decodedFile = urldecode($requestedFile);
+
+if ($providedKey !== $secretKey) {
+    header("HTTP/1.0 403 Forbidden");
+    echo "Access denied!";
+    exit;
+}
+
+if ($decodedFile === 'Sup3rs3cr3tFlag.txt') {
+    $secretContent = file_get_contents($secretFilePath);
+    echo $secretContent;
+} else {
+    header("HTTP/1.0 403 Forbidden");
+    echo "Access denied!";
+}
+?>
+```
+after reading we see that the source.php script gives us the possibility of making GET type requests with the "file" and "key" parameters. key is then the secret code allowing access to the file and file must contain the name of the file. 
+```
+if ($decodedFile === 'Sup3rs3cr3tFlag.txt') {
+     $secretContent = file_get_contents($secretFilePath);
+     echo $secretContent;
+}
+```
+the previous lines check that the file name corresponds to Sup3rs3cr3tFlag.txt and displays this secret message to us 
+```echo $secretContent;```
+what could be simpler we have the name of the file and the key to access it.
+be careful in the key value we have hidden characters (5 characters x) 'Kismet-Abzee-Berrywuxxxx'.
+It is therefore necessary to brute force the missing x characters. the hint gave us part of the missing characters, we just had to brute force the rest to obtain the flag.
+Ps: apparently the 5 missing characters x could be found in the source code of the application personally I didn't solve it like that.
+here is the final request to have the flag:
+
+pic
+
+the flag has unfortunately been removed from the server. I unfortunately didn't take a picture when I solved it but the request on the picture still exact.
+
+
