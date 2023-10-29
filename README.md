@@ -19,3 +19,23 @@ I'll give the solution to some of the challenges that I solved
 
 #### Steganography
 - Toka 
+
+
+### Web
+
+#### Grandline:
+
+This is an injection of graphql code, we even have a console which displays the results of the commands
+
+First of all, we are going to do the enumeration in order to see the functions and methods that are accessible. the following payload does the trick:
+pic1
+
+we can notice that we have a rather interesting flags function with the id, author, content and flag parameters.
+Let's try to query the id 1 of the flags function. here I specified the content and flag parameters.
+pic2
+
+
+We notice that we have a return with the following content: "Why don't you dig harder"; the rest becomes logical we must identify the id which contains our flag. I first tried id 2 then id 3 which turned out to be the right one.
+pic3
+
+Flag: acdfCTF{L3t_try_s0m3_Graph_0ut}
