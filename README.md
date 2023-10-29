@@ -25,7 +25,7 @@ I'll give the solution to some of the challenges that I solved
 <br>
 <details><summary>Web :</summary>
   
-##### * Grandline:
+- Grandline:
 
 <p align="center"> <img src="https://github.com/Assa228/Final_ACDF_CTF_2023/blob/main/images/7.png" alt="img"></p>
 
@@ -47,7 +47,7 @@ We notice that we have a return with the following content: "Why don't you dig h
 
 Flag: acdfCTF{L3t_try_s0m3_Graph_0ut}
 
-#### * Image Lookup:
+- Image Lookup:
 
 <p align="center"> <img src="https://github.com/Assa228/Final_ACDF_CTF_2023/blob/main/images/6.png" alt="img"></p>
 
@@ -58,7 +58,7 @@ here is the query that I used to get the flag
 
 Unfortunately the flag is no longer accessible on the server
 
-#### Konoha:
+- Konoha:
 
 <p align="center"> <img src="https://github.com/Assa228/Final_ACDF_CTF_2023/blob/main/images/4.png" alt="img"></p>
 
