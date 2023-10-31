@@ -109,6 +109,6 @@ It is therefore necessary to brute force the missing x characters. the hint gave
 Ps: apparently the 5 missing characters x could be found in the source code of the application personally I didn't solve it like that.
 here is the final request to have the flag:
 
-<p align="center"> <img src="https://github.com/Assa228/Final_ACDF_CTF_2023/blob/main/images/5.png" alt="img"></p>
+```http://51.20.91.159/source.php?file=Sup3rs3cr3tFlag.txt&key=Kismet-Abzee-Berrywuzh3r3```
 
 The flag has unfortunately been removed from the server. I unfortunately didn't take a picture when I solved it but the request on the picture still exact.
