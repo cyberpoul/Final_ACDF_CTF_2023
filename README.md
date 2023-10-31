@@ -111,9 +111,9 @@ here is the final request to have the flag:
 
 ```http://51.20.91.159/source.php?file=Sup3rs3cr3tFlag.txt&key=Kismet-Abzee-Berrywuzh3r3```
 
-The flag has unfortunately been removed from the server. I unfortunately didn't take a picture when I solved it but the request on the picture still exact.
+The flag has unfortunately been removed from the server. I unfortunately didn't take a picture when I solved it but the previous request still exact..
 
-- Konoha:
+- DPO Agba:
 
 <p align="center"> <img src="https://github.com/Assa228/Final_ACDF_CTF_2023/blob/main/images/8.png" alt="img"></p>
 
