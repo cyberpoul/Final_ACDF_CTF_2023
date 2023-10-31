@@ -124,7 +124,7 @@ The first step was to decode the obfuscated data in the source code. Cyberchef m
 <p align="center"> <img src="https://github.com/Assa228/Final_ACDF_CTF_2023/blob/main/images/9.png" alt="img"></p>
 
 when we analyze the result we can see that we have a way to upload images to the server using the upload.php file. What better way to have a shell!.
-Unfortunately when we tried to upload our image, we have restrictions that prevent us from uploading php files or anything other than images and in addition the file size must not exceed more than 35 bytes. Here we need to bypass this restriction.
+Unfortunately when we tried to upload our image, we have restrictions that prevent us from uploading php files or anything other than images and in addition the file size must not exceed more than 35 bytes. Here we need to bypass these restrictions.
 
 We can trick the filter into thinking the .php file I want to upload is actually a .jpeg file. But I had to modify our file's header like this.
 
