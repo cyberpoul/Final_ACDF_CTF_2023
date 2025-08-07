@@ -10,7 +10,7 @@ https://hackmd.io/@RedTeamTG/acdfctf-final-2023
 </details>
 
 <br>
-<details><summary>Web :</summary>
+<details><summary>Solutions :</summary>
   
 - Grandline:
 
