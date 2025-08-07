@@ -7,21 +7,6 @@ Team: RedTeam-TG
 I'll give the solutions to some of the challenges that I solved but you can check the full writeups of the team here:
 <br>
 https://hackmd.io/@RedTeamTG/acdfctf-final-2023
-
-#### Web
-- Grandline
-- Image Lookup
-- Konoha
-- DPO Agba
-  
-#### Cryptography
-- What's going on 
-
-#### Forensics
-- Detective Conan 1 
-
-#### Steganography
-- Toka 
 </details>
 
 <br>
